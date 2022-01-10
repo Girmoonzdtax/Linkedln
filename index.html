@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkedln</title>
+
+  <!--Стили-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-BoldItalic.eot');
+      src: url('fonts/GhotamPro/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-BoldItalic.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-BoldItalic.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-BoldItalic.ttf') format('truetype');
+      font-weight: bold;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-BlackItalic.eot');
+      src: url('fonts/GhotamPro/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-BlackItalic.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-BlackItalic.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-BlackItalic.ttf') format('truetype');
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-Medium.eot');
+      src: url('fonts/GhotamPro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-Medium.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-Medium.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro.eot');
+      src: url('fonts/GhotamPro/GothamPro.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-MediumItalic.eot');
+      src: url('fonts/GhotamPro/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-MediumItalic.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-MediumItalic.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-MediumItalic.ttf') format('truetype');
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-LightItalic.eot');
+      src: url('fonts/GhotamPro/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-LightItalic.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-LightItalic.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-LightItalic.ttf') format('truetype');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-Italic.eot');
+      src: url('fonts/GhotamPro/GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-Italic.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-Italic.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-Italic.ttf') format('truetype');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-Bold.eot');
+      src: url('fonts/GhotamPro/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-Bold.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-Bold.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-Black.eot');
+      src: url('fonts/GhotamPro/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-Black.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-Black.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-Black.ttf') format('truetype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Gotham Pro';
+      src: url('fonts/GhotamPro/GothamPro-Light.eot');
+      src: url('fonts/GhotamPro/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GhotamPro/GothamPro-Light.woff2') format('woff2'),
+        url('fonts/GhotamPro/GothamPro-Light.woff') format('woff'),
+        url('fonts/GhotamPro/GothamPro-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__body">
+      <div class="logo"><a href="#"><img src="/fonts/Logo.svg" alt="logo"></a></div>
+
+      <div class="vertical__line"></div>
+
+      <div class="items">
+        <a class="items__block items__block_active" href="#">
+          <div><img src="/fonts/feed.svg" alt="feed"></div>
+          <span>
+            <p class="items__text_1">feed</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="/fonts/network.svg" alt="network"></div>
+          <span>
+            <p class="items__text">network</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="/fonts/jobs.svg" alt="jobs"></div>
+          <span>
+            <p class="items__text">jobs</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="/fonts/chat.svg" alt="chat"></div>
+          <span>
+            <p class="items__text">chat</p>
+          </span>
+          <span class="cart__counter">
+            <p class="text__cart__counter">1</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="/fonts/notices.svg" alt="notices"></div>
+          <span>
+            <p class="items__text">notices</p>
+          </span>
+        </a>
+      </div>
+
+      <div class="vertical__line_1"></div>
+
+      <div class="header__search">
+        <a href="#" class="header__search_loop"><img src="/fonts/loop.svg" alt="loop"></a>
+        <span class="header__search__input"><input type="text" placeholder="Search" class="search__input"></span>
+      </div>
+      <div class="vertical__line_2"></div>
+
+      <div class="header__profile">
+        <div><a href="#"><img src="/image/human.png" alt="human" class="header__profile_image"></a></div>
+        <div class="header__profile_column">
+          <a href="#" class="header__profile_text1">D. Kargaev</a>
+          <a href="#" class="header__profile_text2">367 views today</a>
+        </div>
+        <div class="header__profile_column">
+          <span class="header__profile_text3">you</span>
+          <span class="header__profile_text4">+32 <img src="/fonts/arrow-up-right.svg" alt="arrow-up"></span>
+
+        </div>
+      </div>
+      <div class="vertical__line_2"></div>
+
+      <a href="#" class="header__other">
+        <div class="header__other_burger"><img src="/fonts/burger.svg" alt="burger"></div>
+        <span class="header__other_text">other</span>
+      </a>
+      <div class="vertical__line_2"></div>
+
+    </div>
+  </header>
+
+
+  <div class="container">
+    <main class="content">
+
+      <div class="NewPost">
+        <p class="NewPost__text">new post</p>
+        <div class="horizontal__line"></div>
+        <div class="NewPost__block">
+          <input type="text" placeholder="What’s on your mind?" class="NewPost__input">
+          <div class="NewPost__tools">
+            <a href="#" class="NewPost__tool"><img src="/fonts/paperclip.svg" alt="paperclip"></a>
+            <a href="#" class="NewPost__tool"><img src="/fonts/image.svg" alt="iamge"></a>
+            <a href="#" class="NewPost__tool"><img src="/fonts/film.svg" alt="film"></a>
+            <a href="#" class="NewPost__tool"><img src="/fonts/send.svg" alt="send"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter">
+        <div class="filter__line"></div>
+        <span class="filter__block">
+          <p class="filter__text">Sort by: <a class="filter__text filter__text_1">trending</a></p> <img
+            class="filter__icon" src="/fonts/chevron-down.svg" alt="arrowDown">
+        </span>
+        <div class="filter__line"></div>
+      </div>
+
+      <div class="post">
+        <div class="post__upper">
+          <span class="post__upper_text"><a href="#" class="post__upper_text post__upper_link"> Ted Bell</a>, <a
+              href="#" class="post__upper_text post__upper_link">Annette Nguyen</a> and <a href="#"
+              class="post__upper_text  post__upper_link"> Cody Hawkins</a> liked this</span>
+          <a href="#" class="post__upper_burger"><img src="/fonts/burger.svg" alt="burger"></a>
+        </div>
+
+        <div class="post__main">
+          <div class="post__horizontal-line"></div>
+          <div class="post__profile">
+            <img class="post__profile_image" src="/image/Theresa.png" alt="Theresa">
+            <span class="post__profile_text">
+              <p class="post__profile_name">Theresa Steward</p>
+              <p class="post__profile_info">iOS developer</p>
+            </span>
+          </div>
+          <div class="post__main_content">
+            <p class="post__main_text post__main_text1">
+              What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced
+              all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The
+              Dursleys were what wizards called Muggles (not a drop of magical blood in their veins).
+            </p>
+            <div class="post__main_ReadMore">
+              <a href="#" class="post__main_text2">Read more</a>
+            </div>
+          </div>
+          <div class="post__horizontal-line"></div>
+        </div>
+        <div class="post__footer">
+          <a href="#" class="post__footer_like">
+            <img class="post__footer_img" src="/fonts/like.svg" alt="like">
+            <p class="post__footer_text">42</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_comment">
+            <img class="post__footer_img" src="/fonts/comment.svg" alt="comment">
+            <p class="post__footer_text">9</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <div class="post__footer_nothing"></div>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_share">
+            <img class="post__footer_img" src="/fonts/share.svg" alt="share">
+            <p class="post__footer_text">share</p>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post__upper">
+          <span class="post__upper_text"><a href="#" class="post__upper_text post__upper_link"> Audrey Alexander </a>
+            comment this</span>
+          <a href="#" class="post__upper_burger"><img src="/fonts/burger.svg" alt="burger"></a>
+        </div>
+
+        <div class="post__main">
+          <div class="post__horizontal-line"></div>
+          <div class="post__profile">
+            <img class="post__profile_image" src="/image/Kyle_fisher.png" alt="Kyle_fisher">
+            <span class="post__profile_text">
+              <p class="post__profile_name">Kyle Fisher</p>
+              <p class="post__profile_info">Product designer at Commandor Corp.</p>
+            </span>
+          </div>
+          <div class="post__main_content">
+            <p class="post__main_text">How’s your day going, guys?</p>
+            <img src="/image/day_going.png">
+          </div>
+          <div class="post__horizontal-line"></div>
+        </div>
+
+        <div class="post__footer">
+          <a href="#" class="post__footer_like">
+            <img class="post__footer_img" src="/fonts/like__negger.svg" alt="like">
+            <p class="post__footer_text">12</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_comment">
+            <img class="post__footer_img" src="/fonts/comment.svg" alt="comment">
+            <p class="post__footer_text">3</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <div class="post__footer_nothing"></div>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_share">
+            <img class="post__footer_img" src="/fonts/share.svg" alt="share">
+            <p class="post__footer_text">share</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post__upper">
+          <span class="post__upper_text">High rated post from your feed</span>
+          <a href="#" class="post__upper_burger"><img src="/fonts/burger.svg" alt="burger"></a>
+        </div>
+
+        <div class="post__main">
+          <div class="post__horizontal-line"></div>
+          <div class="post__profile">
+            <img class="post__profile_image" src="/image/Brandon Wilson.png" alt="Brandon Wilson">
+            <span class="post__profile_text">
+              <p class="post__profile_name">Brandon Wilson</p>
+              <p class="post__profile_info">Senior UX designer</p>
+            </span>
+          </div>
+          <div class="post__main_content">
+            <p class="post__main_text">There is some new guidelines for iOS</p>
+          </div>
+          <div class="post__main_file">
+            <div class="post__main_icon">
+              <img src="/fonts/textFile.svg" alt="Text file">
+            </div>
+            <div class="post__main_name">
+              <p class="post__name_text1">iOS 11 guidelines for UX/UI designers</p>
+              <p class="post__name_text2">PDF file, 324 kb</p>
+            </div>
+            <a href="#" class="post__main_download"><img src="/fonts/downloadCloud.svg" alt="download"></a>
+          </div>
+          <div class="post__main_file post__main_file_1">
+            <div class="post__main_icon">
+              <img src="/fonts/textFile.svg" alt="Text file">
+            </div>
+            <div class="post__main_name">
+              <p class="post__name_text1">iOS 11 guidelines for developers</p>
+              <p class="post__name_text2">PDF file, 245 kb</p>
+            </div>
+            <a href="#" class="post__main_download"><img src="/fonts/downloadCloud.svg" alt="download"></a>
+          </div>
+          <div class="post__horizontal-line"></div>
+        </div>
+
+        <div class="post__footer">
+          <a href="#" class="post__footer_like">
+            <img class="post__footer_img" src="/fonts/like__negger.svg" alt="like">
+            <p class="post__footer_text">89</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_comment">
+            <img class="post__footer_img" src="/fonts/comment__negger.svg" alt="comment">
+            <p class="post__footer_text">7</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <div class="post__footer_nothing"></div>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_share">
+            <img class="post__footer_img" src="/fonts/share.svg" alt="share">
+            <p class="post__footer_text">share</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post__upper">
+          <span class="post__upper_text">First post from <a href="#" class="post__upper_text post__upper_link">Audrey
+              Alexander</a></span>
+          <a href="#" class="post__upper_burger"><img src="/fonts/burger.svg" alt="burger"></a>
+        </div>
+
+        <div class="post__main">
+          <div class="post__horizontal-line"></div>
+          <div class="post__profile">
+            <img class="post__profile_image" src="/image/Audrey Alexander.png" alt="Audrey Alexander">
+            <span class="post__profile_text">
+              <p class="post__profile_name">Audrey Alexander</p>
+              <p class="post__profile_info">Team lead at Google</p>
+            </span>
+          </div>
+          <div class="post__main_content">
+            <p class="post__main_text">The bun runs along the road and meets a wolf. «Little bun, little bun, I want to
+              eat you!» says the wolf. «I ran away from Grandfather, I ran away from Grandmother, I ran away from the
+              hare. And I can run away from you, grey wolf!» says the bun and runs away.</p>
+          </div>
+          <div class="post__horizontal-line"></div>
+        </div>
+
+        <div class="post__footer">
+          <a href="#" class="post__footer_like">
+            <img class="post__footer_img" src="/fonts/like.svg" alt="like">
+            <p class="post__footer_text">10</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_comment">
+            <img class="post__footer_img" src="/fonts/comment.svg" alt="comment">
+            <p class="post__footer_text">0</p>
+          </a>
+          <div class="post__footer_line"></div>
+          <div class="post__footer_nothing"></div>
+          <div class="post__footer_line"></div>
+          <a href="#" class="post__footer_share">
+            <img class="post__footer_img" src="/fonts/share.svg" alt="share">
+            <p class="post__footer_text">share</p>
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="aside">
+
+      <div class="aside__profile">
+        <img src="/image/abstraction.png" alt="abstraction">
+        <div class="profile__part_1">
+          <img class="profile__image" src="/image/DKaragaev.png" alt="profile__image">
+        </div>
+        <div class="profile__part_2">
+          <p class="profile__text_1">Dmitry Kargaev</p>
+          <img src="/fonts/logoGold.svg" alt="logo">
+        </div>
+        <p class="profile__text_2">Freelance UX/UI designer, 80+ projects in web design, mobile apps (iOS & android) and
+          creative projects. Open to offers.</p>
+      </div>
+
+      <div class="article">
+        <div class="help_me">
+          <button class="write_new_article">
+            <p class="article__text">write new article</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="aside__block">
+        <div class="my_groups__upper">
+          <p class="my_groups_text">my groups</p>
+          <a href="#" class="my_groups_text my_groups_text1">Edit list</a>
+        </div>
+        <div class="my_groups__line"></div>
+
+        <a href="#" class="my_groups__group">
+          <img class="group__image" src="/image/moscow.png" alt="мглу">
+          <p class="group__text">Moscow State Linguistical University</p>
+        </a>
+        <a href="#" class="my_groups__group">
+          <img class="group__image" src="/image/digital.png" alt="Макбук">
+          <p class="group__text">Digital freelancers group</p>
+        </a>
+        <a href="#" class="my_groups__group">
+          <img class="group__image" src="/image/interaction.png" alt="картинка">
+          <p class="group__text">Interaction <br> design <br> association</p>
+          <!--Я пытался перенести на след строку, но не вышло.-->
+        </a>
+        <a href="#" class="my_groups_show">Show all (8)</a>
+      </div>
+
+      <div class="aside__block">
+        <p class="aside__block_text">Followed hashtags</p>
+        <div class="my_groups__line"></div>
+        <div class="hashtag">
+          <ul class="aside__block_line">
+            <a href="#" class="aside__block_hashtag">#work</a>
+            <a href="#" class="aside__block_hashtag">#business</a>
+            <a href="#" class="aside__block_hashtag">#hr</a>
+          </ul>
+          <ul class="aside__block_line">
+            <a href="#" class="aside__block_hashtag">#userinterface</a>
+            <a href="#" class="aside__block_hashtag">#digital </a>
+          </ul class="aside__block_line">
+          <ul class="aside__block_line">
+            <a href="#" class="aside__block_hashtag">#userexperience</a>
+            <a href="#" class="aside__block_hashtag">#ux</a>
+          </ul>
+          <ul class="aside__block_line">
+            <a href="#" class="aside__block_hashtag">#ui</a>
+            <a href="#" class="aside__block_hashtag">#freelance</a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="aside__block">
+        <p class="aside__block_text">Trending articles</p>
+        <div class="my_groups__line"></div>
+        <div class="trending_articles">
+          <a href="#" class="trending_article">
+            <img src="/image/design.png" alt="design" class="article__image">
+            <div class="article__part">
+              <p class="articles__text">How I make cool designs?</p>
+              <p class="articles__text_1">6,340 viewers</p>
+            </div>
+          </a>
+          <a href="#" class="trending_article">
+            <img src="/image/hr.png" alt="hr" class="article__image">
+            <div class="article__part">
+              <p class="articles__text" style="white-space: nowrap">Advices for <br> young HR-manager </p>
+              <!--не бейте за строчку выше. это 300 iq move :) -->
+              <p class="articles__text_1">8,123 viewers</p>
+            </div>
+          </a>
+          <a href="#" class="trending_article">
+            <img src="/image/testing.png" alt="testing" class="article__image">
+            <div class="article__part">
+              <p class="articles__text">A little about usability testing</p>
+              <p class="articles__text_1">3,912 viewers</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__line"></div>
+
+    <div class="footer__group">
+      <a href="#" class="footer__logo">
+        <img src="/fonts/Logo.svg" alt="logo">
+        <span class="footer__logo_text">Linked<span class="footer__logo_text footer__logo_text1">in</span></span>
+      </a>
+
+      <div class="footer__navigation_blocks">
+        <span class="footer__text">Navigation</span>
+        <ul class="footer-nav">
+          <li class="footer__navigation_block">
+            <a href="#" class="navigation__text">About</a>
+            <a href="#" class="navigation__text">Careers</a>
+            <a href="#" class="navigation__text">Advertising</a>
+            <a href="#" class="navigation__text">Small Business</a>
+          </li>
+          <li class="footer__navigation_block">
+            <a href="#" class="navigation__text">Talent Solutions</a>
+            <a href="#" class="navigation__text">Marketing Solutions</a>
+            <a href="#" class="navigation__text">Sales Solutions</a>
+            <a href="#" class="navigation__text">Safery Center</a>
+          </li>
+          <li class="footer__navigation_block">
+            <a href="#" class="navigation__text">Community Guidelines</a>
+            <a href="#" class="navigation__text">Privacy & Terms</a>
+            <a href="#" class="navigation__text">Mobile App</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fast__acces">
+        <span class="footer__text">Fast access</span>
+        <div class="fast__acces_btn">
+          <button class="questions">
+            <p href="#" class="btn__text">Questions?</p>
+            <img src="/fonts/helpCircle.svg" class="btn__img">
+          </button>
+          <button class="settings">
+            <p href="#" class="btn__text btn__text_1">Settings</p>
+            <img src="/fonts/settings.svg" class="btn__img">
+          </button>
+        </div>
+      </div>
+
+      <div class="language">
+        <p class="footer__text">language</p>
+        <div class="language__switch">
+          <p class="footer__text footer__text_1">English</p>
+          <img src="/fonts/arrowDown.svg" class="lang__img">
+        </div>
+        <div class="language-content">
+          <a href="#" class="language-content__text">English</a>
+          <a href="#" class="language-content__text">Russian</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
