@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Linkedln</title>
 
   <!--Стили-->
@@ -185,10 +185,10 @@
       <div class="vertical__line_2"></div>
 
       <div class="header__profile">
-        <div><a href="#"><img src="image/human.png" alt="human" class="header__profile_image"></a></div>
+        <a href="#"><img src="image/human.png" alt="human" class="header__profile_image"></a>
         <div class="header__profile_column">
-          <a href="#" class="header__profile_text1">D. Kargaev</a>
-          <a href="#" class="header__profile_text2">367 views today</a>
+          <p href="#" class="header__profile_text1">D. Kargaev</p>
+          <p href="#" class="header__profile_text2">367 views today</p>
         </div>
         <div class="header__profile_column">
           <span class="header__profile_text3">you</span>
@@ -202,6 +202,51 @@
         <div class="header__other_burger"><img src="fonts/burger.svg" alt="burger"></div>
         <span class="header__other_text">other</span>
       </a>
+      <div class="vertical__line_2"></div>
+    </div>
+
+
+    <div class="apt">
+      <div class="items_apt">
+        <a class="items__block items__block_active" href="#">
+          <div><img src="fonts/feed.svg" alt="feed"></div>
+          <span>
+            <p class="items__text_1">feed</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="fonts/network.svg" alt="network"></div>
+          <span>
+            <p class="items__text">network</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="fonts/jobs.svg" alt="jobs"></div>
+          <span>
+            <p class="items__text">jobs</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="fonts/chat.svg" alt="chat"></div>
+          <span>
+            <p class="items__text">chat</p>
+          </span>
+          <span class="cart__counter">
+            <p class="text__cart__counter">1</p>
+          </span>
+        </a>
+        <a class="items__block" href="#">
+          <div><img src="fonts/notices.svg" alt="notices"></div>
+          <span>
+            <p class="items__text">notices</p>
+          </span>
+        </a>
+      </div>
+
+      <div class="header__search_apt">
+        <a href="#" class="header__search_loop"><img src="fonts/loop.svg" alt="loop"></a>
+        <span class="header__search__input"><input type="text" placeholder="Search" class="search__input"></span>
+      </div>
       <div class="vertical__line_2"></div>
 
     </div>
@@ -302,7 +347,7 @@
           </div>
           <div class="post__main_content">
             <p class="post__main_text">How’s your day going, guys?</p>
-            <img src="image/day_going.png">
+            <img src="image/day_going.png" class="post__main_img">
           </div>
           <div class="post__horizontal-line"></div>
         </div>
@@ -437,7 +482,7 @@
     <aside class="aside">
 
       <div class="aside__profile">
-        <img src="image/abstraction.png" alt="abstraction">
+        <img src="image/abstraction.png" alt="abstraction" class="post__main_img">
         <div class="profile__part_1">
           <img class="profile__image" src="image/DKaragaev.png" alt="profile__image">
         </div>
@@ -450,11 +495,10 @@
       </div>
 
       <div class="article">
-        <div class="help_me">
-          <button class="write_new_article">
-            <p class="article__text">write new article</p>
-          </button>
-        </div>
+        <button class="write_new_article">
+          <p class="article__text">write new article</p>
+        </button>
+
       </div>
 
       <div class="aside__block">
@@ -475,7 +519,6 @@
         <a href="#" class="my_groups__group">
           <img class="group__image" src="image/interaction.png" alt="картинка">
           <p class="group__text">Interaction <br> design <br> association</p>
-          <!--Я пытался перенести на след строку, но не вышло.-->
         </a>
         <a href="#" class="my_groups_show">Show all (8)</a>
       </div>
@@ -518,8 +561,7 @@
           <a href="#" class="trending_article">
             <img src="image/hr.png" alt="hr" class="article__image">
             <div class="article__part">
-              <p class="articles__text" style="white-space: nowrap">Advices for <br> young HR-manager </p>
-              <!--не бейте за строчку выше. это 300 iq move :) -->
+              <p class="articles__text">Advices for <br> young HR-manager </p>
               <p class="articles__text_1">8,123 viewers</p>
             </div>
           </a>
@@ -540,61 +582,64 @@
     <div class="footer__line"></div>
 
     <div class="footer__group">
-      <a href="#" class="footer__logo">
-        <img src="fonts/Logo.svg" alt="logo">
-        <span class="footer__logo_text">Linked<span class="footer__logo_text footer__logo_text1">in</span></span>
-      </a>
 
-      <div class="footer__navigation_blocks">
-        <span class="footer__text">Navigation</span>
-        <ul class="footer-nav">
-          <li class="footer__navigation_block">
-            <a href="#" class="navigation__text">About</a>
-            <a href="#" class="navigation__text">Careers</a>
-            <a href="#" class="navigation__text">Advertising</a>
-            <a href="#" class="navigation__text">Small Business</a>
-          </li>
-          <li class="footer__navigation_block">
-            <a href="#" class="navigation__text">Talent Solutions</a>
-            <a href="#" class="navigation__text">Marketing Solutions</a>
-            <a href="#" class="navigation__text">Sales Solutions</a>
-            <a href="#" class="navigation__text">Safery Center</a>
-          </li>
-          <li class="footer__navigation_block">
-            <a href="#" class="navigation__text">Community Guidelines</a>
-            <a href="#" class="navigation__text">Privacy & Terms</a>
-            <a href="#" class="navigation__text">Mobile App</a>
-          </li>
-        </ul>
-      </div>
+      <div class="footer_apt-1">
+        <a href="#" class="footer__logo">
+          <img src="fonts/Logo.svg" alt="logo">
+          <span class="footer__logo_text">Linked<span class="footer__logo_text footer__logo_text1">in</span></span>
+        </a>
 
-      <div class="fast__acces">
-        <span class="footer__text">Fast access</span>
-        <div class="fast__acces_btn">
-          <button class="questions">
-            <p href="#" class="btn__text">Questions?</p>
-            <img src="fonts/helpCircle.svg" class="btn__img">
-          </button>
-          <button class="settings">
-            <p href="#" class="btn__text btn__text_1">Settings</p>
-            <img src="fonts/settings.svg" class="btn__img">
-          </button>
+        <div class="footer__navigation_blocks">
+          <span class="footer__text">Navigation</span>
+          <ul class="footer-nav">
+            <li class="footer__navigation_block">
+              <a href="#" class="navigation__text">About</a>
+              <a href="#" class="navigation__text">Careers</a>
+              <a href="#" class="navigation__text">Advertising</a>
+              <a href="#" class="navigation__text">Small Business</a>
+            </li>
+            <li class="footer__navigation_block">
+              <a href="#" class="navigation__text">Talent Solutions</a>
+              <a href="#" class="navigation__text">Marketing Solutions</a>
+              <a href="#" class="navigation__text">Sales Solutions</a>
+              <a href="#" class="navigation__text">Safery Center</a>
+            </li>
+            <li class="footer__navigation_block">
+              <a href="#" class="navigation__text">Community Guidelines</a>
+              <a href="#" class="navigation__text">Privacy & Terms</a>
+              <a href="#" class="navigation__text">Mobile App</a>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div class="language">
-        <p class="footer__text">language</p>
-        <div class="language__switch">
-          <p class="footer__text footer__text_1">English</p>
-          <img src="fonts/arrowDown.svg" class="lang__img">
+      <div class="footer_apt-2">
+        <div class="fast__acces">
+          <span class="footer__text">Fast access</span>
+          <div class="fast__acces_btn">
+            <button class="questions">
+              <p href="#" class="btn__text">Questions?</p>
+              <img src="fonts/helpCircle.svg" class="btn__img">
+            </button>
+            <button class="settings">
+              <p href="#" class="btn__text btn__text_1">Settings</p>
+              <img src="fonts/settings.svg" class="btn__img">
+            </button>
+          </div>
         </div>
-        <div class="language-content">
-          <a href="#" class="language-content__text">English</a>
-          <a href="#" class="language-content__text">Russian</a>
+        <div class="language">
+          <p class="footer__text">language</p>
+          <div class="language__switch">
+            <p class="footer__text footer__text_1">English</p>
+            <img src="fonts/arrowDown.svg" class="lang__img">
+          </div>
+          <div class="language-content">
+            <a href="#" class="language-content__text">English</a>
+            <a href="#" class="language-content__text">Russian</a>
+          </div>
         </div>
       </div>
-
     </div>
   </footer>
 </body>
+
 </html>
