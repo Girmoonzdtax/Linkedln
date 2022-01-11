@@ -178,6 +178,7 @@ body {
 }
 
 .header__search_loop {
+  display: flex;
   margin-left: 33px;
 }
 
@@ -1292,13 +1293,15 @@ body {
     display: none;
   }
 
-  .NewPost__tool {
-    margin-right: 10px;
+  .header__search_loop {
+    margin: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .header__search_loop {
-    margin-left: auto;
-    margin-right: 0;
+  .NewPost__tool {
+    margin-right: 10px;
   }
 
   .footer_apt-1 {
@@ -1315,5 +1318,6 @@ body {
 
   .items__block {
     width: 60px;
+    margin-right: 1px;
   }
 }
