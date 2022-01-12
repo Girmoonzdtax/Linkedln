@@ -1227,8 +1227,7 @@ body {
   }
 
   .footer_apt-1 {
-    display: flex;
-    justify-content: center;
+    display: block;
   }
 
   .footer_apt-2 {
@@ -1238,7 +1237,16 @@ body {
   }
 
   .footer__logo {
-    margin: auto 0;
+    margin: 0 auto;
+  }
+
+  .footer__navigation_blocks {
+    width: 300px;
+    margin: 15px auto;
+  }
+
+  .footer__text {
+    font-size: 0.875rem;
   }
 }
 
@@ -1309,7 +1317,7 @@ body {
   }
 
   .footer__navigation_blocks {
-    margin-left: 10px;
+    width: 100%;
   }
 
   .NewPost__input {
